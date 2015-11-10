@@ -6,6 +6,8 @@
 
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,6 +26,8 @@ public class Crawler {
         ArrayList<String> genres = new ArrayList<>();
         URL oracle = new URL("http://store.steampowered.com/app/" + game + "/?l=portuguese");
         BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
+//        FileInputStream page = new FileInputStream(new File("C://Temp//DmC_ Devil May Cry no Steam.html"));
+//        BufferedReader in = new BufferedReader(new InputStreamReader(page));
         String inputLine;
         Boolean find = false;
         while ((inputLine = in.readLine()) != null) {
